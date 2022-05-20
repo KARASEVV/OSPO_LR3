@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;500&display=swap" rel="stylesheet">
+    <title>Умикашвили Анна</title>
+</head>
+<script>
+    function set_fon_1() {
+        g_i.style.backgroundImage = 'url(fon_1.jpeg)';
+        setTimeout(set_fon_2, 3000);
+    }
+    function set_fon_2() {
+        g_i.style.backgroundImage = 'url(fon_2.jpeg)';
+        setTimeout(set_fon_3, 3000);
+    }
+    function set_fon_3() {
+        g_i.style.backgroundImage = 'url(fon_3.jpeg)';
+        setTimeout(set_fon_1, 3000);
+    }
+    function SetLeng(){
+        if (leng.checked) {
+            //alert('ENG');
+            document.title = "Umikashvili Anna";
+            _name.innerHTML="Umikashvili Anna";
+            _age.innerHTML="21 years old";
+            _personal_skills.innerHTML="<strong>Personal skills</strong><li>Responsibility</li><li>Attention to detail</li><li>Striving for development</li>";
+            _contacts.innerHTML="<strong>Contacts:</strong><br>City: Moscow<br>Phone number: 89774740528 (Telegram, WhatsApp)<br>Mail: mr.lenidoxll@mail.ru";
+            _tar.innerHTML="<strong>Purpose:</strong> programmer";
+            _langs.innerHTML="<strong>Professional skills</strong><li>C++ - good</li><li>Python3 - good</li><li>MuSQL - basic syntax</li><li>Understanding basic algorithms</li>";
+            _experience.innerHTML="<strong>Experience</strong><li>June 2019 — November 2020, Memorial, archivist. She mastered the skills of working in a team, the ability to quickly solve non-trivial tasks, and also gained experience working with a database.</li><strong>Personal projects:</strong><li>Application development in the cross-platform Qt Creator environment.</li><strong>Publications:</strong><li>Modeling of kinematic characteristics of motion of a flat multi-link mechanism. Automation and Information Technology (AIT-2021)</li>";
+            _edu.innerHTML="<strong>Education</strong><br>MSTU \"STANKIN\" - 3rd year";
+            _human_langs.innerHTML="<strong>Knowledge of languages</strong><li>Russian - native</li><li>English - advanced</li>";
+        }
+        else {
+            //alert ('RUS');
+            document.title = "Умикашвили Анна";
+            _name.innerHTML="Умикашвили Анна";
+            _age.innerHTML="21 лет";
+            _personal_skills.innerHTML="<strong>Личные навыки</strong><li>Ответственность</li><li>Внимание к деталям</li><li>Стремление к развитию</li>";
+            _contacts.innerHTML="<strong>Контакты: </strong><br>Город: Москва<br>Телефон: 89774740528 (Telegram, WhatsApp)<br>Почта: mr.lenidoxll@mail.ru";
+            _tar.innerHTML="<strong>Цель:</strong> программист";
+            _langs.innerHTML="<strong>Профессиональные навыки</strong><li>C++ - хорошо</li><li>Python3 - хорошо</li><li>MuSQL - баовый синтаксис</li><li>Понимание базовых алгоритмов</li>";
+            _experience.innerHTML="<strong>Опыт</strong><li>июнь 2019 — ноябрь 2020, Мемориал, архивист. Овладела навыками работы в коллективе, умениями оперативно решать нетривиальные задачи, а также получила опыт работы с базой данных.</li><strong>Личные проекты:</strong><li>Разработка приложения в кроссплатформенной среде Qt Creator.</li><strong>Публикации:</strong><li>Моделирование кинематических характеристик движения плоского многозвенного механизма. Автоматизация и информационные технологии (АИТ-2021)</li>";
+            _edu.innerHTML="<strong>Образование</strong><br>МГТУ \"СТАНКИН\" - 3 курс";
+            _human_langs.innerHTML="<strong>Знание языков</strong><li>Русский - родной</li><li>Английский - advanced</li>";
+        }
+    }
+</script>
+<body onload="set_fon_1()">
+    <label class="checkbox-green">
+        <input type="checkbox" id="leng" onchange="SetLeng()">
+        <span class="checkbox-green-switch" data-label-on="Eng" data-label-off="Rus"></span>
+    </label>
+    <div class="main">
+        <div class="personal_info">
+            <img src="ava.png" alt="Мое лицо" class="photo">
+            <div class="name" id="_name">Умикашвили Анна</div>
+            <div class="age" id="_age">21 лет</div>
+            <div class="personal_skills" id="_personal_skills">
+                <strong>Личные навыки</strong>
+                    <li>Ответственность</li>
+                    <li>Внимание к деталям</li>
+                    <li>Стремление к развитию</li>
+            </div>
+            <div class="contacts" id="_contacts">
+                <strong>Контакты: </strong><br>
+                Город: Москва<br>
+                Телефон: 89774740528 (Telegram, WhatsApp)<br>
+                Почта: mr.lenidoxll@mail.ru
+            </div>
+        </div>
+        <div class="professional_info">
+            <div class="target" id="_tar">
+                <strong>Цель:</strong> программист
+            </div>
+            <div class="langs" id="_langs">
+                <strong>Профессиональные навыки</strong>
+                <li>C++ - хорошо</li>
+                <li>Python3 - хорошо</li>
+                <li>MuSQL - баовый синтаксис</li>
+                <li>Понимание базовых алгоритмов</li>
+            </div>
+            <div class="experience" id="_experience">
+                <strong>Опыт</strong>
+                <li>июнь 2019 — ноябрь 2020, Мемориал, архивист. 
+                    Овладела навыками работы в коллективе, умениями оперативно решать нетривиальные задачи, а также получила опыт работы с базой данных.
+                </li>
+                <strong>Личные проекты:</strong>
+                <li>Разработка приложения в кроссплатформенной среде Qt Creator.</li>
+                <strong>Публикации:</strong>
+                <li>Моделирование кинематических характеристик движения плоского многозвенного механизма. Автоматизация и информационные технологии (АИТ-2021)</li>
+            </div>
+            <div class="edu" id="_edu">
+                <strong>Образование</strong><br>
+                МГТУ "СТАНКИН" - 3 курс
+            </div>
+            <div class="human_langs" id="_human_langs">
+                <strong>Знание языков</strong>
+                <li>Русский - родной</li>
+                <li>Английский - advanced</li>
+            </div>
+            <div class="human_langs">
+                <a href="form.html">Практическая часть</a>
+            </div>
+        </div>
+    </div>
+    <div class="grand_img" id="g_i"></div>
+</body>
+</html>
